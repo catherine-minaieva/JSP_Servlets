@@ -1,0 +1,14 @@
+ALTER TABLE `test`.`companies_projects` DROP FOREIGN KEY `companies_projects_ibfk_1`;
+ALTER TABLE `test`. `companies_projects` ADD CONSTRAINT `companies_projects_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `test`.`companies`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`developers_projects` DROP FOREIGN KEY `developers_projects_ibfk_1`;
+ALTER TABLE `test`. `developers_projects` ADD CONSTRAINT `developers_projects_ibfk_1` FOREIGN KEY (`developer_id`) REFERENCES `test`.`developers`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`developers_skills` DROP FOREIGN KEY `developers_skills_ibfk_1`;
+ALTER TABLE `test`. `developers_skills` ADD CONSTRAINT `developers_skills_ibfk_1` FOREIGN KEY (`developer_id`) REFERENCES `test`.`developers`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`customers_projects` DROP FOREIGN KEY `customers_projects_ibfk_1`;
+ALTER TABLE `test`. `customers_projects` ADD CONSTRAINT `customers_projects_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `test`.`customers`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`companies_projects` DROP FOREIGN KEY `companies_projects_ibfk_2`;
+ALTER TABLE `test`. `companies_projects` ADD CONSTRAINT `companies_projects_ibfk_2` FOREIGN KEY (`project_id`) REFERENCES `test`.`projects`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`developers_projects` DROP FOREIGN KEY `developers_projects_ibfk_2`;
+ALTER TABLE `test`. `developers_projects` ADD CONSTRAINT `developers_projects_ibfk_2` FOREIGN KEY (`developer_id`) REFERENCES `test`.`developers`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `test`.`developers_skills` DROP FOREIGN KEY `developers_skills_ibfk_2`;
+ALTER TABLE `test`.`developers_skills` ADD CONSTRAINT `developers_skills_ibfk_2` FOREIGN KEY (`skill_id`) REFERENCES `test`.`skills`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
