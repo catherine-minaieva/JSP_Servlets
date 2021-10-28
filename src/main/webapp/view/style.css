@@ -1,13 +1,20 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    color: #312825;
+}
+.index{
+    background: #2a1d05;
+    font-family: "Segoe UI Black", serif;
+    font-size: 16px;
+    text-align: center;
 }
 
-.navbar {
+.navigation {
     overflow: hidden;
-    background-color: #333;
+    background-color: #375314;
 }
 
-.navbar a {
+.navigation a {
     float: left;
     font-size: 16px;
     color: white;
@@ -33,7 +40,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #2fb220;
 }
 
 .dropdown-content {
@@ -41,13 +48,13 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: darkslategray;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -62,14 +69,13 @@ body {
     display: block;
 }
 
-.zui-table {
+.table {
     border: solid 1px #DDEEEE;
     border-collapse: collapse;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
 }
-
-.zui-table thead th {
+.table thead th {
     background-color: #DDEFEF;
     border: solid 1px #DDEEEE;
     color: #336B6B;
@@ -77,8 +83,7 @@ body {
     text-align: left;
     text-shadow: 1px 1px 1px #fff;
 }
-
-.zui-table tbody td {
+.table tbody td {
     border: solid 1px #DDEEEE;
     color: #333;
     padding: 10px;
@@ -86,37 +91,43 @@ body {
 }
 
 .button {
-    background-color: #333;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+    background-color: #336B6B;
+    background: -webkit-linear-gradient(#7db9e8, #51A1E0);
+    background: linear-gradient(#7db9e8, #51A1E0);
+    border: solid 1px #1E5799;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 1px #fff;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: bold 14px/32px'Open Sans', sans-serif;
+    height: 34px;
+    outline: none;
+    padding: 0 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px #1E5799;
 }
-
 .button:hover {
-    background-color: red;
-    color: white;
+    background-color: #51A1E0;
+    background: -webkit-linear-gradient(#51A1E0, #2689D7);
+    background: linear-gradient(#51A1E0, #2689D7);
+    border: solid 1px #1A4B84;
+    box-shadow: inset 0 0 2px #fff;
 }
-
-.button1 {
-    background-color: #333;
-    border: none;
-    color: white;
-    padding: 1px 1px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 2px 2px;
-    cursor: pointer;
+.button:active {
+    position: relative;
+    top: 1px;
 }
-
-.button1:hover {
-    background-color: red;
-    color: white;
+.button:focus {
+    border: solid 1px #361515;
+}
+.button[disabled] {
+    background: #ccc;
+    border: solid 1px #888;
+    color: #999;
+    cursor: default;
+    text-shadow: 1px 1px 1px #fff;
 }
