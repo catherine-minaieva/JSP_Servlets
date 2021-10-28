@@ -30,10 +30,10 @@
         </tr>
         <tr>
             <td>
-                <p>City</p>
+                <p>HeadOffice</p>
             </td>
             <td>
-                <input type="text" name="city" tabindex="2">
+                <input type="text" name="headOffice" tabindex="2">
             </td>
         </tr>
 

@@ -10,7 +10,7 @@
 <body>
 <c:import url="/view/navigation.jsp"/>
 <h3>To delete company, provide an ID: </h3>
-<form method="post" action="deleteCompany">
+<form method="delete" action="deleteCompany">
     <table>
         <tbody>
         <tr>

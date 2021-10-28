@@ -23,13 +23,13 @@
             <c:forEach items="${companies}" var="company">
                 <tr>
                     <td>
-                        <c:out value="${company.id}"/>
+                        <c:out value="${id}"/>
                     </td>
                     <td>
-                        <c:out value="${company.name}"/>
+                        <c:out value="${name}"/>
                     </td>
                     <td>
-                        <c:out value="${company.city}"/>
+                        <c:out value="${headOffice}"/>
                     </td>
                 </tr>
             </c:forEach>

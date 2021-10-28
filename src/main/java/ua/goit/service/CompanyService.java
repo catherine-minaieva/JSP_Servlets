@@ -41,7 +41,7 @@ public class CompanyService implements ua.goit.service.BaseService<Company> {
 
     public Company mapCompany(HttpServletRequest req) {
         Long id = Long.parseLong(req.getParameter("id").trim());
-        String companyName = req.getParameter("companyName").trim();
+        String companyName = req.getParameter("name").trim();
         String headOffice = req.getParameter("headOffice").trim();
 
         Company company = new Company();

@@ -21,9 +21,15 @@
         </tr>
         <tr>
             <td>
-                <p>New city: </p>
+                <p>Company Name:</p>
             </td>
-            <td><input type="text" name="city"></td>
+            <td><input type="textr" name="name"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Head Office: </p>
+            </td>
+            <td><input type="text" name="headOffice"></td>
         </tr>
         </tbody>
     </table>
