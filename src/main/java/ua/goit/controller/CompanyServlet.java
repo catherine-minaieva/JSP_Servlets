@@ -48,38 +48,41 @@ public class CompanyServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String action = req.getPathInfo ();
-        if (action.startsWith ("/createCompany")) {
+        String action = req.getPathInfo();
+        if (action.startsWith("/createCompany")) {
             Company company = companyService.mapCompany(req);
-            req.getRequestDispatcher ("/view/company/create_company.jsp").forward (req, resp);
-            companyService.create (company);
-            req.setAttribute ("message", "New Company created ");
+            req.getRequestDispatcher("/view/company/create_company.jsp").forward(req, resp);
+            companyService.create(company);
+            req.setAttribute("message", "New Company created ");
         }
-        if (action.startsWith ("/findCompany")) {
-            final String id = req.getParameter ("id");
-            final Company company = companyService.findByID (Long.valueOf (id));
+        if (action.startsWith("/findCompany")) {
+            final String id = req.getParameter("id");
+            final Company company = companyService.findByID(Long.valueOf(id));
             if (company.getID() == null) {
-                req.setAttribute ("message", "Company not found");
+                req.setAttribute("message", "Company not found");
             } else {
                 req.setAttribute("message", String.format("Company found: %s", company));
             }
-            req.getRequestDispatcher ("/view/company/find_company.jsp").forward (req, resp);
+            req.getRequestDispatcher("/view/company/find_company.jsp").forward(req, resp);
         }
 
-        if (action.startsWith ("/updateCompany")) {
-            Long id = Long.valueOf ((req.getParameter ("id")));
-            Company company = companyService.findByID (id);
-            String name = req.getParameter("name");
-            String newOffice = req.getParameter ("headOffice");
-            company.setName(name);
-            company.setHeadOffice (newOffice);
-            companyService.update (id, company);
-            req.setAttribute ("message", String.format("Company updated"));
+        if (action.startsWith("/updateCompany")) {
+            Long id = Long.valueOf((req.getParameter("id")));
+            Company company = companyService.findByID(id);
+
+            if (company.getID() == null) {
+                req.setAttribute("message", "Company not found");
+
+                Company companyForUpdate = companyService.mapCompany(req);
+                companyService.update(id, companyForUpdate);
+                req.setAttribute("message", "Company updated");
+                req.getRequestDispatcher ("/view/company/update_company.jsp").forward (req, resp);
+            }
         }
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String action = req.getPathInfo ();
         if (action.startsWith ("/deleteCompany")) {
             Long id = Long.valueOf ((req.getParameter ("id")));

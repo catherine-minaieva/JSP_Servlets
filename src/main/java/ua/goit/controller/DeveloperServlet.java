@@ -39,7 +39,7 @@ public class DeveloperServlet extends HttpServlet {
             req.getRequestDispatcher("/view/developer/delete_developer.jsp").forward(req, resp);
         }
         if (action.startsWith("/allDeveloper")) {
-            List<Developer> developerList = developerService.findAll ();
+            List<Developer> developerList = developerService.findAll();
             req.setAttribute("developers", developerList);
             req.getRequestDispatcher("/view/developer/all_developers.jsp").forward(req, resp);
         }
@@ -78,6 +78,7 @@ public class DeveloperServlet extends HttpServlet {
         }
         if (action.startsWith ("/updateDeveloper")) {
             Long id = Long.valueOf ((req.getParameter ("id")));
+
             Developer developer = developerService.findByID (id);
             String newSalary = req.getParameter ("salary");
             developer.setSalary(Double.valueOf (newSalary));

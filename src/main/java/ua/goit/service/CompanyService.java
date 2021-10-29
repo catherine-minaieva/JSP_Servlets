@@ -53,31 +53,12 @@ public class CompanyService implements ua.goit.service.BaseService<Company> {
 
     public Company mapEditCompany(Company company, HttpServletRequest req) {
         Long id = Long.parseLong(req.getParameter("id").trim());
-        String companyName = req.getParameter("companyName").trim();
-        String headOffice = req.getParameter("head_office").trim();
+        String companyName = req.getParameter("name").trim();
+        String headOffice = req.getParameter("headOffice").trim();
 
         company.setId(id);
         company.setName(companyName);
         company.setHeadOffice(headOffice);
         return company;
     }
-
-//    public String validateCompany(HttpServletRequest req) {
-//        String companyName = req.getParameter("companyName").trim();
-//        if (get(companyName) != null) {
-//            return String.format("Company with title %s already exist", companyName);
-//        }
-//        return "";
-//    }
-//
-//    public String validateEditCompany(HttpServletRequest req) {
-//        String oldName = req.getParameter("oldName").trim();
-//        String newName = req.getParameter("companyName").trim();
-//        if (oldName.equals(newName)) {
-//            return "";
-//        } else if (get(newName) != null) {
-//            return String.format("Company with title %s already exist", newName);
-//        }
-//        return "";
-//    }
 }
