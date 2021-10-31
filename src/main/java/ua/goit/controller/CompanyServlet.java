@@ -66,6 +66,18 @@ public class CompanyServlet extends HttpServlet {
             req.getRequestDispatcher("/view/company/find_company.jsp").forward(req, resp);
         }
 
+        if (action.startsWith ("/deleteCompany")) {
+            Long id = Long.valueOf((req.getParameter("id")));
+            Company company = companyService.findByID(Long.valueOf(id));
+            if (company.getID() == null) {
+                req.setAttribute("message", "Company not found");
+            } else {
+                companyService.delete(id);
+                req.setAttribute("message", "Company deleted");
+            }
+            req.getRequestDispatcher("/view/company/delete_company.jsp").forward(req, resp);
+        }
+
         if (action.startsWith("/updateCompany")) {
             Long id = Long.valueOf((req.getParameter("id")));
             Company company = companyService.findByID(id);
@@ -79,16 +91,5 @@ public class CompanyServlet extends HttpServlet {
                 req.getRequestDispatcher ("/view/company/update_company.jsp").forward (req, resp);
             }
         }
-    }
-
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-            Long id = Long.valueOf ((req.getParameter ("id")));
-            Company company = companyService.findByID (id);
-            if (company.getID() == null) {
-                req.setAttribute ("message", "Company not found");
-            } else {companyService.delete (id);
-                req.setAttribute ("message", "Company deleted");
-            }
     }
 }

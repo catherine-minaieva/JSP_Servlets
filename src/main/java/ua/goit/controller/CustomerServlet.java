@@ -62,9 +62,10 @@ public class CustomerServlet extends HttpServlet {
             }
             req.getRequestDispatcher ("/view/customer/find_customer.jsp").forward (req, resp);
         }
+
         if (action.startsWith ("/deleteCustomer")) {
             Long id = Long.valueOf ((req.getParameter ("id")));
-            Customer customer = customerService.mapCustomer(req);
+            Customer customer = customerService.findByID(Long.valueOf (id));
             if (customer.getID() == null) {
                 req.setAttribute ("message", "Customer not found");
             } else {
@@ -73,6 +74,7 @@ public class CustomerServlet extends HttpServlet {
             }
             req.getRequestDispatcher("/view/customer/delete_customer.jsp").forward(req, resp);
         }
+
         if (action.startsWith ("/updateCustomer")) {
             Long id = Long.valueOf((req.getParameter("id")));
             Customer customer = customerService.findByID(id);

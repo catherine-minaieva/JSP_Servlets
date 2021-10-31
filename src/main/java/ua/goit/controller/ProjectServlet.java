@@ -1,9 +1,8 @@
 package ua.goit.controller;
 
-import ua.goit.model.Project;
+
 import ua.goit.repositoty.ProjectRepositoryImpl;
 import ua.goit.service.ProjectService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
