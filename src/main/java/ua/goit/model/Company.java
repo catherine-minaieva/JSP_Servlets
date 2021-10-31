@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class Company implements BaseEntity<Long>, Serializable {
     private static final long serialVersionUID = -3989228596940809304L;
 
-
+    @Id
     @Column(name = "id")
     private Long id;
 

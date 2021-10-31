@@ -22,15 +22,9 @@
             <tbody>
             <c:forEach items="${companies}" var="company">
                 <tr>
-                    <td>
-                        <c:out value="${id}"/>
-                    </td>
-                    <td>
-                        <c:out value="${name}"/>
-                    </td>
-                    <td>
-                        <c:out value="${headOffice}"/>
-                    </td>
+                    <td><c:out value="${company.id}"/></td>
+                    <td><c:out value="${company.name}"/></td>
+                    <td><c:out value="${company.headOffice}"/></td>
                 </tr>
             </c:forEach>
             </tbody>

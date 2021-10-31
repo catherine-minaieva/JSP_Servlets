@@ -56,8 +56,8 @@ public class CompanyServlet extends HttpServlet {
             req.setAttribute("message", "New Company created ");
         }
         if (action.startsWith("/findCompany")) {
-            final String id = req.getParameter("id");
-            final Company company = companyService.findByID(Long.valueOf(id));
+             String id = req.getParameter("id");
+             Company company = companyService.findByID(Long.valueOf(id));
             if (company.getID() == null) {
                 req.setAttribute("message", "Company not found");
             } else {
@@ -68,7 +68,7 @@ public class CompanyServlet extends HttpServlet {
 
         if (action.startsWith ("/deleteCompany")) {
             Long id = Long.valueOf((req.getParameter("id")));
-            Company company = companyService.findByID(Long.valueOf(id));
+            Company company = companyService.findByID(id);
             if (company.getID() == null) {
                 req.setAttribute("message", "Company not found");
             } else {
