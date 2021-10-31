@@ -41,8 +41,8 @@ public class CompanyServlet extends HttpServlet {
         }
         if (action.startsWith ("/allCompanies")) {
             List<Company> companies = companyService.findAll();
-            req.setAttribute ("companies", companies);
-            req.getRequestDispatcher ("/view/company/all_companies.jsp").forward (req, resp);
+            req.setAttribute("companies", companies);
+            req.getRequestDispatcher("/view/company/all_companies.jsp").forward(req, resp);
         }
     }
 
@@ -72,7 +72,7 @@ public class CompanyServlet extends HttpServlet {
 
             if (company.getID() == null) {
                 req.setAttribute("message", "Company not found");
-
+            } else{
                 Company companyForUpdate = companyService.mapCompany(req);
                 companyService.update(id, companyForUpdate);
                 req.setAttribute("message", "Company updated");
@@ -83,8 +83,6 @@ public class CompanyServlet extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        String action = req.getPathInfo ();
-        if (action.startsWith ("/deleteCompany")) {
             Long id = Long.valueOf ((req.getParameter ("id")));
             Company company = companyService.findByID (id);
             if (company.getID() == null) {
@@ -92,7 +90,5 @@ public class CompanyServlet extends HttpServlet {
             } else {companyService.delete (id);
                 req.setAttribute ("message", "Company deleted");
             }
-            resp.sendRedirect("/ProjectManagementSystem/company/showCompanies");
-        }
     }
 }
