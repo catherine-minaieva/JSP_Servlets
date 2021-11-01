@@ -9,8 +9,8 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To delete company, provide an ID: </h3>
-<form method="delete" action="deleteCompany">
+<h3>To delete company, set an ID: </h3>
+<form method="post" action="deleteCompany">
     <table>
         <tbody>
         <tr>

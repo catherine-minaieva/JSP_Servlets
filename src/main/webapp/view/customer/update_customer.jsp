@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To update Customer provide an ID and new industry and city: </h3>
+<h3>To update Customer set an ID, new name, tax code and head office: </h3>
 <form method="post" action="updateCustomer">
     <table>
         <tbody>
@@ -21,13 +21,17 @@
         </tr>
         <tr>
             <td>
-                <p>New industry: </p>
+                <p>New Name: </p>
             </td>
-            <td><input type="text" name="industry"></td>
+            <td><input type="text" name="name"></td>
             <td>
-                <p>New city: </p>
+                <p>New Tax Code: </p>
             </td>
-            <td><input type="text" name="city"></td>
+            <td><input type="text" name="taxCode"></td>
+            <td>
+                <p>New headOffice: </p>
+            </td>
+            <td><input type="text" name="headOffice"></td>
         </tr>
         </tbody>
     </table>

@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To Create Company provide an ID, city and industry: </h3>
+<h3>To Create Company set an Id, Name and Head Office: </h3>
 <form method="post" action="createCompany">
     <table>
         <tbody>

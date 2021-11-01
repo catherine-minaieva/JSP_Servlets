@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To Create Customer provide an ID, name, city and industry: </h3>
+<h3>To create Customer set an ID, name, TaxCode and HeadOffice: </h3>
 <form method="post" action="createCustomer">
     <table>
         <tbody>
@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td>
-                <p>City</p>
+                <p>TaxCode</p>
             </td>
             <td>
                 <input type="text" name="city" tabindex="2">
@@ -37,7 +37,7 @@
         </tr>
         <tr>
             <td>
-                <p>Industry</p>
+                <p>HeadOffice</p>
             </td>
             <td>
                 <input type="text" name="industry" tabindex="3">

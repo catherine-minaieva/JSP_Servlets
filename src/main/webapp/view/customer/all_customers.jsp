@@ -16,10 +16,10 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Customer ID</th>
-                <th> Name</th>
-                <th>City</th>
-                <th>Industry</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Tax Code</th>
+                <th>HeadOffice</th>
 
             </tr>
             </thead>
@@ -33,10 +33,10 @@
                         <c:out value="${customer.name}"/>
                     </td>
                     <td>
-                        <c:out value="${customer.city}"/>
+                        <c:out value="${customer.taxCode}"/>
                     </td>
                     <td>
-                        <c:out value="${customer.industry}"/>
+                        <c:out value="${customer.headOffice}"/>
                     </td>
 
                 </tr>
