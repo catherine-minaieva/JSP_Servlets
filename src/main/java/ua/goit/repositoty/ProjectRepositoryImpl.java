@@ -68,7 +68,7 @@ public class ProjectRepositoryImpl implements BaseRepository<Project, Long> {
     }
 
     private Project getProject(Project project, PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setLong(1, project.getID());
+        preparedStatement.setLong(1, project.getId());
         preparedStatement.setString(2, project.getName());
         preparedStatement.setString(3, project.getBaseTechnology());
         preparedStatement.setString(4, project.getCreationDate());

@@ -28,9 +28,4 @@ public class Skill implements Serializable, BaseEntity<Long> {
 
     @Column(name = "level")
     private String level;
-
-    @Override
-    public Long getID() {
-        return id;
-    }
 }

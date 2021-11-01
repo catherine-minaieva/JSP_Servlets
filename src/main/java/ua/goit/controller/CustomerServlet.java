@@ -55,7 +55,7 @@ public class CustomerServlet extends HttpServlet {
         if (action.startsWith ("/findCustomer")) {
             final String id = req.getParameter ("id");
             final Customer customer = customerService.findByID(Long.valueOf (id));
-            if (customer.getID() == null) {
+            if (customer.getId() == null) {
                 req.setAttribute ("message", "Customer not found");
             } else {
                 req.setAttribute ("message", String.format ("Customer found: %s, ", customer));
@@ -66,7 +66,7 @@ public class CustomerServlet extends HttpServlet {
         if (action.startsWith ("/deleteCustomer")) {
             Long id = Long.valueOf ((req.getParameter ("id")));
             Customer customer = customerService.findByID(Long.valueOf (id));
-            if (customer.getID() == null) {
+            if (customer.getId() == null) {
                 req.setAttribute ("message", "Customer not found");
             } else {
                 customerService.delete(id);
@@ -79,7 +79,7 @@ public class CustomerServlet extends HttpServlet {
             Long id = Long.valueOf((req.getParameter("id")));
             Customer customer = customerService.findByID(id);
 
-            if (customer.getID() == null) {
+            if (customer.getId() == null) {
                 req.setAttribute("message", "Company not found");
 
                 Customer customerForUpdate = customerService.mapCustomer(req);

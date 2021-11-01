@@ -35,9 +35,4 @@ public class Project implements Serializable, BaseEntity<Long> {
 
     @Column(name = "cost")
     private Long cost;
-
-    @Override
-    public Long getID() {
-        return id;
-    }
 }

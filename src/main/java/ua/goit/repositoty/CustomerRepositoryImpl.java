@@ -73,7 +73,7 @@ public class CustomerRepositoryImpl implements BaseRepository<Customer, Long> {
     }
 
     private Customer getCustomer(Customer customer, PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setLong(1, customer.getID());
+        preparedStatement.setLong(1, customer.getId());
         preparedStatement.setString(2, customer.getName());
         preparedStatement.setString(3, customer.getTaxCode());
         preparedStatement.setString(4, customer.getHeadOffice());

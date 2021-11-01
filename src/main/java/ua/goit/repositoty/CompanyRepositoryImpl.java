@@ -62,7 +62,7 @@ public class CompanyRepositoryImpl implements BaseRepository<Company, Long> {
     @Override
     public Company create(Company company) {
         PreparedStatement preparedStatement = CONNECTION.prepareStatement("INSERT INTO " + SCHEMA_NAME + ".companies (id, name,head_office) VALUES (?,?,?) ;");
-        preparedStatement.setLong(1, company.getID());
+        preparedStatement.setLong(1, company.getId());
         preparedStatement.setString(2, company.getName());
         preparedStatement.setString(3, company.getHeadOffice());
         preparedStatement.executeUpdate();

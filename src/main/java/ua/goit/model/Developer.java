@@ -37,10 +37,5 @@ import java.io.Serializable;
 
         @Column(name = "salary")
         private Double salary;
-
-    @Override
-    public Long getID() {
-        return id;
-    }
 }
 

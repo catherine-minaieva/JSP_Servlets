@@ -17,6 +17,7 @@ import java.io.Serializable;
 
 @Entity(name = "companies")
 public class Company implements BaseEntity<Long>, Serializable {
+
     private static final long serialVersionUID = -3989228596940809304L;
 
     @Id
@@ -28,9 +29,4 @@ public class Company implements BaseEntity<Long>, Serializable {
 
     @Column(name = "head_office")
     private String headOffice;
-
-    @Override
-    public Long getID() {
-        return id;
-    }
 }

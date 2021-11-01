@@ -69,7 +69,7 @@ public class DeveloperRepositoryImpl implements BaseRepository<Developer, Long> 
     }
 
     private Developer updateDeveloper(Developer developer, PreparedStatement preparedStatement) throws SQLException {
-        preparedStatement.setLong(1, developer.getID());
+        preparedStatement.setLong(1, developer.getId());
         preparedStatement.setString(2, developer.getName());
         preparedStatement.setInt(3, developer.getAge());
         preparedStatement.setString(4, developer.getGender());
