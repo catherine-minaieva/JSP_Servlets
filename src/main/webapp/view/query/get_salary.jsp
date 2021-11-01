@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To find developers salary enter ID project</h3>
+<h3>To get developers salary enter id of project</h3>
 <form method="post" action="getSalary">
     <table>
         <tbody>

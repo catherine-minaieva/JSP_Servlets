@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To find developers on project enter ID project</h3>
+<h3>To find developers of project enter an ID of project</h3>
 <form method="post" action="getDeveloperByProject">
     <table>
         <tbody>
