@@ -25,14 +25,14 @@
                 <p>Name</p>
             </td>
             <td>
-                <input type="text" name="name" tabindex="1"></td>
+                <input type="text" name="name" tabindex="2"></td>
         </tr>
         <tr>
             <td>
                 <p>TaxCode</p>
             </td>
             <td>
-                <input type="text" name="city" tabindex="2">
+                <input type="text" name="city" tabindex="3">
             </td>
         </tr>
         <tr>
@@ -40,7 +40,7 @@
                 <p>HeadOffice</p>
             </td>
             <td>
-                <input type="text" name="industry" tabindex="3">
+                <input type="text" name="industry" tabindex="4">
             </td>
         </tr>
         <tr>

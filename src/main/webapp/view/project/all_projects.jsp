@@ -32,7 +32,10 @@
                         <c:out value="${project.name}"/>
                     </td>
                     <td>
-                        <c:out value="${project.field}"/>
+                        <c:out value="${project.baseTechnology}"/>
+                    </td>
+                    <td>
+                        <c:out value="${project.creationDate}"/>
                     </td>
                     <td>
                         <c:out value="${project.cost}"/>

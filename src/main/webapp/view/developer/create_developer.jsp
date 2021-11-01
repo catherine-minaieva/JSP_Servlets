@@ -26,7 +26,7 @@
             </td>
             <td>
 
-                <input type="text" name="name" tabindex="1"></td>
+                <input type="text" name="name" tabindex="2"></td>
         </tr>
         <tr>
             <td>
@@ -34,7 +34,7 @@
             </td>
             <td>
 
-                <input type="number" name="age" tabindex="2">
+                <input type="number" name="age" tabindex="3">
             </td>
         </tr>
         <tr>
@@ -42,7 +42,7 @@
                 <p>Gender</p>
             </td>
             <td>
-               <input type="text" name="gender" tabindex="5">
+               <input type="text" name="gender" tabindex="4">
             </td>
         </tr>
         <tr>

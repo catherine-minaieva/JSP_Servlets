@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To create project, provide an ID, name, field and cost: </h3>
+<h3>To create project, provide an id, name, baseTechnology, creationDate and cost: </h3>
 <form method="post" action="createProject">
     <table>
         <tbody>
@@ -30,16 +30,23 @@
         </tr>
         <tr>
             <td>
-                <p>Field</p>
+                <p>Base Technology</p>
             </td>
             <td>
-                <input type="text" name="field" tabindex="3"></td>
+                <input type="text" name="baseTechnology" tabindex="3"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Creation Date</p>
+            </td>
+            <td>
+                <input type="text" name="creationDate" tabindex="4"></td>
         </tr>
         <tr>
             <td>
                 <p>Cost</p>
             </td>
-            <td><input type="number" name="cost" tabindex="4"></td>
+            <td><input type="number" name="cost" tabindex="5"></td>
         </tr>
         </tbody>
     </table>

@@ -26,14 +26,14 @@
                 <p>Name</p>
             </td>
             <td>
-                <input type="text" name="name" tabindex="1"></td>
+                <input type="text" name="name" tabindex="2"></td>
         </tr>
         <tr>
             <td>
                 <p>HeadOffice</p>
             </td>
             <td>
-                <input type="text" name="headOffice" tabindex="2">
+                <input type="text" name="headOffice" tabindex="3">
             </td>
         </tr>
 

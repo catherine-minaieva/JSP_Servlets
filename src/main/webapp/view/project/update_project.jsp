@@ -15,15 +15,38 @@
         <tbody>
         <tr>
             <td>
-                <p>Project ID:</p>
+                <p>ID</p>
             </td>
-            <td><input type="number" name="id"></td>
+            <td>
+                <input type="number" name="id" tabindex="1"></td>
         </tr>
         <tr>
             <td>
-                <p>New cost: </p>
+                <p>Name</p>
             </td>
-            <td><input type="number" name="cost"></td>
+            <td>
+
+                <input type="text" name="name" tabindex="2"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Base Technology</p>
+            </td>
+            <td>
+                <input type="text" name="baseTechnology" tabindex="3"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Creation Date</p>
+            </td>
+            <td>
+                <input type="text" name="creationDate" tabindex="4"></td>
+        </tr>
+        <tr>
+            <td>
+                <p>Cost</p>
+            </td>
+            <td><input type="number" name="cost" tabindex="5"></td>
         </tr>
         </tbody>
     </table>
