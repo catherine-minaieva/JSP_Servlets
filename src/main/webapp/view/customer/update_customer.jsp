@@ -15,24 +15,36 @@
         <tbody>
         <tr>
             <td>
-                <p>Customer ID:</p>
+                <p>ID</p>
             </td>
-            <td><input type="number" name="id"></td>
+            <td>
+                <input type="text" name="id" tabindex="1"></td>
         </tr>
         <tr>
             <td>
-                <p>New Name: </p>
+                <p>Name</p>
             </td>
-            <td><input type="text" name="name"></td>
             <td>
-                <p>New Tax Code: </p>
-            </td>
-            <td><input type="text" name="taxCode"></td>
-            <td>
-                <p>New headOffice: </p>
-            </td>
-            <td><input type="text" name="headOffice"></td>
+                <input type="text" name="name" tabindex="2"></td>
         </tr>
+        <tr>
+            <td>
+                <p>TaxCode</p>
+            </td>
+            <td>
+                <input type="text" name="city" tabindex="3">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>HeadOffice</p>
+            </td>
+            <td>
+                <input type="text" name="industry" tabindex="4">
+            </td>
+        </tr>
+        <tr>
+        <tr>
         </tbody>
     </table>
     <button type="submit" class="button">Update</button>

@@ -60,11 +60,10 @@ public class ProjectServlet extends HttpServlet {
             Project project = projectService.findByID(Long.valueOf(id));
             if (project.getId() == null) {
                 req.setAttribute("message", "Project not found");
-                req.getRequestDispatcher("/view/project/find_project.jsp").forward(req, resp);
             } else {
                 req.setAttribute("message", String.format("Project found: %s", project));
-                req.getRequestDispatcher("/view/project/find_project.jsp").forward(req, resp);
             }
+            req.getRequestDispatcher("/view/project/find_project.jsp").forward(req, resp);
         }
 
         if (action.startsWith("/deleteProject")) {
