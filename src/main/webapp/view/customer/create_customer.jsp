@@ -32,7 +32,7 @@
                 <p>TaxCode</p>
             </td>
             <td>
-                <input type="text" name="city" tabindex="3">
+                <input type="text" name="taxCode" tabindex="3">
             </td>
         </tr>
         <tr>
@@ -40,7 +40,7 @@
                 <p>HeadOffice</p>
             </td>
             <td>
-                <input type="text" name="industry" tabindex="4">
+                <input type="text" name="headOffice" tabindex="4">
             </td>
         </tr>
         <tr>

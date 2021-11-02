@@ -9,7 +9,7 @@
 </head>
 <body>
 <c:import url="/view/navigation.jsp"/>
-<h3>To create project, provide an id, name, baseTechnology, creationDate and cost: </h3>
+<h3>To create project set an id, name, baseTechnology, creationDate and cost: </h3>
 <form method="post" action="createProject">
     <table>
         <tbody>

@@ -45,8 +45,8 @@ public class ProjectService implements BaseService<Project>{
 
         Long id = Long.parseLong(req.getParameter("id").trim());
         String name = req.getParameter("name").trim();
-        String baseTechnology = req.getParameter("base_technology").trim();
-        String creationDate  = req.getParameter("creation_date").trim();
+        String baseTechnology = req.getParameter("baseTechnology").trim();
+        String creationDate  = req.getParameter("creationDate").trim();
         Long cost = Long.parseLong(req.getParameter("cost").trim());
 
         Project project = new Project();
